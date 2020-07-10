@@ -1,0 +1,48 @@
+    nav li {
+        display: inline;
+        padding-right: 10px;
+    }
+    
+    main article h1,
+    h2 {
+        border: 0px solid red;
+        width: 10px;
+        display: inline;
+    }
+    
+    .dot-green {
+        height: 11px;
+        width: 11px;
+        background-color: green;
+        border-radius: 50%;
+        display: inline-block;
+    }
+    
+    .dot-blue {
+        height: 11px;
+        width: 11px;
+        background-color: blue;
+        border-radius: 50%;
+        display: inline-block;
+    }
+    
+    .dot-red {
+        height: 11px;
+        width: 11px;
+        background-color: red;
+        border-radius: 50%;
+        display: inline-block;
+    }
+    
+    .dot-transp {
+        height: 9px;
+        width: 9px;
+        background-color: rgba(255, 255, 255, 0);
+        border: 1px solid black;
+        border-radius: 50%;
+        display: inline-block;
+    }
+    
+    img {
+        width: 300px;
+    }
