@@ -12,3 +12,5 @@ for (let i = 1; i < numbers.length; i++) {
 }
 
 console.log(numbers);
+
+// O que acontece é que, a cada número, partindo do segundo (array[1]), ele vai iterar por cada número que vem antes, trocando os dois, caso seja maior do que o número atual.
