@@ -26,3 +26,16 @@ for (let i2 = 0; i2 < n; i2++) {
     console.log(quad2);
     quad2 = "";
 }
+
+console.log("Terceiro modo.");
+// Terceira forma, que eu vi na resolução comentada
+n = 5;
+let linha = "";
+
+for (let indice = 0; indice < n; indice += 1) {
+    linha += "*";
+}
+
+for (let indice2 = 0; indice2 < n; indice2 += 1) {
+    console.log(linha);
+}

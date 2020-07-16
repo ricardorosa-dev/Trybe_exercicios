@@ -21,3 +21,13 @@ for (i = 0; i < n; i++) {
     console.log(quad2);
     quad2 = "";
 }
+console.log("Terceiro modo.");
+// Terceiro modo, visto na resolução comentada.
+
+n = 5;
+let linha = "";
+
+for (let indice = 0; indice < n; indice++) {
+    linha += "*"
+    console.log(linha);
+}
