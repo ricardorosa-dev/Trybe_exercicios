@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        .myClass {
+            width: 300px;
+            text-align: justify;
+        }
+    </style>
+</head>
+
+<body>
+    <h2 id="page-title">Título</h2>
+    <p id="paragraph">Dê uma cor para este parágrafo!</p>
+    <h4 id="subtitle">Subtítulo</h4>
+    <p id="second-paragraph">Segundo parágrafo!</p>
+    <p class="myClass">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel lorem non ex pulvinar dignissim. Morbi lacinia magna eget tellus elementum, in gravida tortor commodo. Etiam quis quam vel dolor imperdiet interdum. Pellentesque malesuada lectus justo,
+        eu convallis justo lobortis nec. Ut arcu metus, pellentesque at neque laoreet, faucibus tempus nisl. Quisque eleifend tellus quis lacus eleifend eleifend. In vestibulum imperdiet nisi sit amet fringilla.
+    </p>
+    <p class="myClass">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel lorem non ex pulvinar dignissim. Morbi lacinia magna eget tellus elementum, in gravida tortor commodo. Etiam quis quam vel dolor imperdiet interdum. Pellentesque malesuada lectus justo,
+        eu convallis justo lobortis nec. Ut arcu metus, pellentesque at neque laoreet, faucibus tempus nisl. Quisque eleifend tellus quis lacus eleifend eleifend. In vestibulum imperdiet nisi sit amet fringilla.
+    </p>
+    <script>
+        var paragraph = document.getElementById("paragraph");
+        paragraph.style.color = "red";
+        let title = document.getElementById("page-title");
+        title.innerHTML = "Waking Life";
+        let secParagraph = document.getElementById("second-paragraph");
+        secParagraph.innerHTML = "Now all your base are belong to me!"
+        secParagraph.style.fontSize = "20px";
+        let sub = document.getElementById("subtitle");
+        sub.style.color = "green";
+
+        let myClass = document.getElementsByClassName("myClass");
+        console.log(myClass[0]);
+        myClass[0].style.fontFamily = "Cambria";
+        myClass[1].style.fontFamily = "sans-serif";
+        console.log(myClass[1]);
+    </script>
+</body>
+
+</html>
