@@ -64,11 +64,16 @@
         let title = document.createElement("h1");
         document.body.appendChild(title);
         title.innerText = "Exercício 5.2 - JavaScript DOM";
+
         // Ex2
         let mainContentDiv = document.createElement("div");
         document.body.appendChild(mainContentDiv);
         mainContentDiv.className = "main-content";
 
+        // Ex3
+        let centerContentDiv = document.createElement("div");
+        mainContentDiv.appendChild(centerContentDiv);
+        centerContentDiv.className = "center-content";
 
     </script>
 </body>
