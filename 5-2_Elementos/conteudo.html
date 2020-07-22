@@ -1,0 +1,41 @@
+<html>
+
+<head>
+    <style>
+        #paiDoPai {
+            background-color: lightgray;
+        }
+
+        #pai {
+            background-color: azure;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="paiDoPai">paiDoPai
+        <div id="pai">Pai
+            <div id="primeiroFilho">1o filho</div>
+            <div id="elementoOndeVoceEsta"> EU
+                <div id="primeiroFilhoDoFilho"> 1o filho de EU</div>
+                <div id="segundoEUltimoFilhoDoFilho"> 2o filho de EU</div>
+            </div>
+            Atenção!
+            <div id="terceiroFilho"> 3o filho de EU</div>
+            <div id="quartoEUltimoFilho"> 4o filho de EU</div>
+        </div>
+    </div>
+
+    <script>
+        let eu = document.getElementById("elementoOndeVoceEsta");
+        eu.parentNode.style.color = "red";
+        eu.childNodes[1].innerText = "Eu sou o filho do EU";
+        eu.previousElementSibling.innerText = "Sou o primeiro filho de Pai";
+        eu.childNodes[1].style.color = "green";
+        console.log(eu.parentNode.childNodes[4]);
+        console.log(eu.nextElementSibling);
+        console.log(eu.parentElement.childNodes[5]);
+    </script>
+</body>
+
+</html>
