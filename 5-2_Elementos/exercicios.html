@@ -96,6 +96,26 @@
         img.className = "small-image";
         img.src = "https://picsum.photos/200";
 
+        // Ex8
+        let UnList = document.createElement("ul");
+        rightContentDiv.appendChild(UnList);
+
+        for (let i = 0; i < 10; i++) {
+            let listItem = document.createElement("li");
+            UnList.appendChild(listItem);
+        }
+
+        UnList.childNodes[0].innerText = "um";
+        UnList.childNodes[1].innerText = "dois";
+        UnList.childNodes[2].innerText = "três";
+        UnList.childNodes[3].innerText = "quatro";
+        UnList.childNodes[4].innerText = "cinco";
+        UnList.childNodes[5].innerText = "seis";
+        UnList.childNodes[6].innerText = "sete";
+        UnList.childNodes[7].innerText = "oito";
+        UnList.childNodes[8].innerText = "nove";
+        UnList.childNodes[9].innerText = "dez";
+
     </script>
 </body>
 
