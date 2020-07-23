@@ -125,6 +125,26 @@
         //Exercícios parte 2
         //Ex1
         title.className = "title";
+
+        //Ex2
+        for (let i = 0; i < 3; i += 1) {
+            let headers = document.getElementsByTagName("h3");
+            headers[i].className = "description";
+        }
+
+        // Ex3
+        mainContentDiv.removeChild(leftContentDiv);
+
+        // Ex4
+        rightContentDiv.style.marginRight = "auto";
+
+        // Ex5
+        mainContentDiv.style.backgroundColor = "green";
+
+        //Ex 6
+        UnList.removeChild(UnList.childNodes[9]);
+        UnList.removeChild(UnList.childNodes[8]);
+
     </script>
 </body>
 
