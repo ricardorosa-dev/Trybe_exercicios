@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+
+<head>
+    <title>JavaScript event handlers exercise</title>
+    <!-- load css from jsweb -->
+    <link rel="stylesheet" type="text/css" href="http://nptcstudents.co.uk/andrewg/jsweb/css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="http://nptcstudents.co.uk/andrewg/jsweb/css/jsweb.css" />
+
+
+
+    <!-- JavaScript could go up here -->
+    <!-- JavaScript could go up here -->
+    <!-- JavaScript could go up here -->
+
+
+
+</head>
+
+<body>
+    <div id="excontainer">
+        <div id="pagecontent">
+            <h1>Event handlers exercise</h1>
+
+            <p>Download this page and open with Dreamweaver. Or right click and select &quot;View Source&quot;, then cut
+                and paste the code to Dreamweaver.</p>
+
+            <h2>Task 1</h2>
+
+            <p>Add a HTML button to this page in the area highlighted below. Using the <b>onClick()</b> event handler
+                have the button, when clicked, open an <b>alert()</b> box which says &quot;You clicked the button&quot;.
+
+            <div class="exampleblock">
+                <button class="myButton">Alert button</button>
+            </div>
+
+            <script>
+                let myButton = document.getElementsByClassName("myButton")[0];
+                console.log(myButton);
+                myButton.addEventListener('click', function () {
+                    window.alert("You clicked the button");
+                });
+
+            </script>
