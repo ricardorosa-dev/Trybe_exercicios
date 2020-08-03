@@ -1,0 +1,80 @@
+<html>
+
+<head>
+    <style>
+        body {
+            background-color: #12263a;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        p {
+            text-align: justify;
+            margin: 20px;
+        }
+
+        main {
+            color: #f4edea;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <h1>Lorem ipsum</h1>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus leo tortor, elementum sit amet quam id,
+            sagittis posuere nisl. Cras bibendum elit eu augue tincidunt iaculis. Morbi at dolor sed lacus viverra
+            iaculis sit amet sit amet leo. Maecenas facilisis vitae nisi eu bibendum. Etiam ut fringilla massa. Fusce
+            vulputate, ex elementum blandit convallis, sapien ante dictum ex, vitae lobortis orci erat eget augue. Proin
+            quis arcu rutrum tortor tempus sagittis. Maecenas non urna eget risus efficitur pretium vitae vel est. Ut id
+            mi ut mi vehicula tincidunt. Duis porttitor fermentum diam, a aliquet quam auctor ut. Aenean purus felis,
+            tempor id velit varius, venenatis elementum nisl. Praesent sit amet ipsum risus. Duis pellentesque purus
+            tortor, ac ultricies metus consequat eget. Nullam dictum lacus sit amet semper fringilla.
+        </p>
+        <p>
+            Sed vel velit eros. Nam varius tempus est gravida varius. Nunc laoreet, dolor non rutrum ultricies, arcu
+            tellus convallis sapien, ac sollicitudin mauris velit ut velit. Phasellus finibus eros felis, eu malesuada
+            tortor semper nec. In sit amet ante nec mi eleifend tempor. Donec et rutrum lectus, at vulputate velit. Duis
+            nunc sem, placerat non tincidunt et, sollicitudin ut enim. Etiam volutpat tellus orci, et interdum sem
+            facilisis vel.
+        </p>
+        <p>
+            Sed at hendrerit tellus. Nam vel quam nec nibh porta mattis non non ipsum. Morbi pharetra ac urna vitae
+            tristique. Fusce vulputate sem ac arcu hendrerit, vel elementum orci ornare. In erat est, rhoncus in sapien
+            eget, finibus dictum quam. Donec vel lacus euismod, pharetra lacus id, consectetur purus. Donec vestibulum
+            rhoncus quam id porttitor. Suspendisse cursus laoreet odio quis interdum. Ut mattis at libero ut eleifend.
+            Vestibulum sollicitudin volutpat nisl sed aliquam. Nullam eleifend lectus at eleifend interdum. Mauris
+            ultricies ligula vitae aliquam vulputate.
+        </p>
+        <section class="form">
+            <p>
+                <input type="text" placeholder="Background color" id="bg-color" />
+
+                <label>Font:</label>
+                <select>
+                    <option>sans-serif</option>
+                    <option>serif</option>
+                    <option>Georgia</option>
+                    <option>Verdana</option>
+                    <option>Courier New</option>
+                </select>
+                <input type="color" />
+                <input type="text" placeholder="size">
+
+                <input type="text" placeholder="line-height">
+            </p>
+        </section>
+    </main>
+
+    <script>
+        let bgColor = document.querySelector("#bg-color");
+        bgColor.addEventListener('change', function () {
+            console.log(bgColor.value);
+        });
+    </script>
+</body>
+
+</html>

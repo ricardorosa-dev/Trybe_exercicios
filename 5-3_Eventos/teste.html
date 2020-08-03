@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Cat Walk</title>
+    <style>
+        img {
+            width: 290px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <img style="position:absolute;" src="http://www.anniemation.com/clip_art/images/cat-walk.gif">
+
+    <!-- <img style="position:absolute;" src="https://acegif.com/wp-content/gifs/dancing-cat-64.gif"> -->
+
+    <script>
+        let cat = document.getElementsByTagName('img')[0];
+        cat.style.left = "0px";
+        let num = 0; //num é a propriedade 'left' do cat
+        let catWidth = 300;
+        let middleCat = catWidth / 2;
+        let middleScreen = window.innerWidth / 2;
+        let isInTheMiddle = true;
+
+        function setCatBack() {
+            cat.src = "http://www.anniemation.com/clip_art/images/cat-walk.gif";
+            isInTheMiddle = false;
+        }
+
+        // func: anda. se ta no meio da tela ou no fim da tela, break;
+        function walkForward() {
+            num += 10;
+            catWalkNumber = num + "px";
+            cat.style.left = catWalkNumber;
+            cat.style.width = (parseInt(cat.style.width) + 10) + "px";
+        }
+
+        function walkMiddle() {
+            cat.src = "https://acegif.com/wp-content/gifs/dancing-cat-64.gif";
+            setTimeout(setCatBack, 900);
+        }
+
+        function walkBackward() {
+            num -= 10;
+            catWalkNumber = num + "px";
+            cat.style.left = catWalkNumber;
+        }
+
+        function catWalk() {
+            if (num > (middleScreen - middleCat) - 5 && num < (middleScreen - middleCat) + 5) {
+                if (isInTheMiddle) {
+                    walkMiddle();
+                } else {
+                    walkForward();
+                }
+            } else if (num > window.innerWidth - catWidth) {
+                walkBackward();
+            } else {
+                walkForward();
+            }
+        } // end of function
+
+        // if antes do meio da tela: func: anda até o meio da tela
+
+        // if no meio da tela, vira gato dançando, espera 10,
+        // ta indo = on (func), voltando = on (func com num = -1)
+
+        //if no fim da tela, volta (num = -1 ?)
+        window.setInterval(catWalk, 50);
+    </script>
+</body>
+
+</html>

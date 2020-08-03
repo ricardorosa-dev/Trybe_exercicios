@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Cat Walk</title>
+    <style>
+        img {
+            left: 0px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <img style="position:absolute;" src="http://www.anniemation.com/clip_art/images/cat-walk.gif">
+
+    <script>
+        let cat = document.getElementsByTagName('img')[0];
+        // cat.style.left = '0px'; Como ele dá o resultado.
+        // console.log(parseInt(cat.style.left)); = 0
+        let num = -300;
+
+        function catWalk() {
+            // Fazer o gato voltar
+            console.log(window.innerWidth);
+            // O GATO APARECE DE NOVO NO COMEÇO DA TELA
+            // if (num < window.innerWidth) {
+            //     num += 10;
+            //     let catLeftNumber = num + "px";
+            //     cat.style.left = catLeftNumber;
+            //     console.log(catLeftNumber)
+            // } else {
+            num = 0;
+            // }
+
+            //O GATO VOLTA PRA TRÁS
+            let catGo = true;
+            if (catGo) {
+                num += 10;
+                let catLeftNumber = num + "px";
+                cat.style.left = catLeftNumber;
+                console.log(catLeftNumber)
+
+                if (num > window.innerWidth) {
+                    catGo = false;
+                }
+            } else {
+                num -= 10;
+                let catLeftNumber = num + "px";
+                cat.style.left = catLeftNumber;
+                console.log(catLeftNumber)
+            }
+
+        }
+        window.setInterval(catWalk, 50);
+
+    </script>
+
+</body>
+
+</html>

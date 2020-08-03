@@ -1,0 +1,23 @@
+{
+  "name": "trybe_exercicios",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ricardorosa-dev/Trybe_exercicios.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ricardorosa-dev/Trybe_exercicios/issues"
+  },
+  "homepage": "https://github.com/ricardorosa-dev/Trybe_exercicios#readme",
+  "dependencies": {
+    "bulma": "^0.9.0",
+    "just-validate": "^1.5.0"
+  }
+}

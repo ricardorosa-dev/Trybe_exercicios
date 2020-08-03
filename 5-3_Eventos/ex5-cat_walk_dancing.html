@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Cat Walk</title>
+    <style>
+        img {
+            width: 290px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <img style="position:absolute;" src="http://www.anniemation.com/clip_art/images/cat-walk.gif">
+
+    <!-- <img style="position:absolute;" src="https://acegif.com/wp-content/gifs/dancing-cat-64.gif"> -->
+
+    <script>
+        let cat = document.getElementsByTagName('img')[0];
+        cat.style.left = "0px";
+        let catWidth = 290;
+        let num = 0;
+        let walkForward = true;
+        console.log(window.innerWidth);
+
+        function catWalk() {
+
+            //Cat dancing no meio da tela
+            let midCat = catWidth / 2;
+            let midScreen = (window.innerWidth / 2) - midCat;
+            let pause = 0;
+
+            //Se não chegou no fim da tela:
+            if (walkForward === true) {
+
+
+                if (num > midScreen - 5 && num < midScreen + 5) {
+                    cat.src = "https://acegif.com/wp-content/gifs/dancing-cat-64.gif";
+                    pause += 1;
+                }
+
+                //console.log(walkForward);
+                num += 10;
+                let catLeftNumber = num + "px";
+                cat.style.left = catLeftNumber;
+
+                if (num > (window.innerWidth - catWidth)) {
+                    walkForward = false;
+                }
+
+            } else {
+                //Se já chegou no fim da tela
+                //console.log(false);
+                num -= 10;
+                let catLeftNumber = num + "px";
+                cat.style.left = catLeftNumber;
+
+                if (num === 0) {
+                    walkForward = true;
+                }
+
+            }
+        }
+        window.setInterval(catWalk, 50);
+
+    </script>
+
+</body>
+
+</html>
