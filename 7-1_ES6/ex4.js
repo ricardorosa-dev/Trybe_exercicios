@@ -21,6 +21,7 @@ let changeX = (givenString, param) => {
   return string
 }
 
+//
 function stringSkills(param1,) {
   skillArray.sort();
   let answer = `O que é um Tryber?
