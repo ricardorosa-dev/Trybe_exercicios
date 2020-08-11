@@ -1,0 +1,30 @@
+<html>
+
+<head>
+
+</head>
+
+<body>
+  <button id="click-count">Click Count</button>
+  <span id="answer"></span>
+
+  <script>
+    const clickCountButton = document.getElementById('click-count');
+    const answer = document.getElementById('answer');
+
+    let number = 0;
+    answer.innerText = `A quantidade de clicks é de ${number}.`;
+    let clickCount = 0;
+
+
+
+    clickCountButton.addEventListener('click', _ => {
+      clickCount++;
+      answer.innerHTML = `A quantidade de clicks é de ${clickCount}.`;
+
+    });
+
+  </script>
+</body>
+
+</html>
