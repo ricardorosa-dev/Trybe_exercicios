@@ -1,22 +1,19 @@
-// Promise
+const fetch = require('node-fetch');
 
-const userLeft = false;
-const userWatchingCatMeme = false;
-
-function watchTutorialPromise() { // não precisa de parâmetros
-  return new Promise((resolve, reject) => {
-    if (userLeft) {
-      reject({ name: 'User left', message: ':(' })
-    } else if (userWatchingCatMeme) {
-      reject({ name: 'User watching cat meme', message: 'WebDevSimplified < Cat' })
-    } else {
-      resolve('Thumbs up and subscribe')
-    }
-  })
+async function verifiedFetch(url) {
+  if (url === 'https://api.chucknorris.io/jokes/random?category=dev') {
+    return fetch(url)
+      .then((r) => r.json())
+      .then((r) => r.value);
+  }
+  throw new Error('endpoint não existe');
 }
 
-watchTutorialPromise().then((message) => {
-  console.log('Success ' + message);
-}).catch((error) => {
-  console.log(error.name + ' ' + error.message);
-})
+async function sendJokeToFriend(name) {
+  const message = await verifiedFetch('https://api.chucknorris.io/jokes/random?category=dev')
+    .then((joke) => `Oi ${name}, ouve essa: ${joke}`)
+    .catch((err) => err);
+  console.log(message);
+}
+
+sendJokeToFriend("Anna")

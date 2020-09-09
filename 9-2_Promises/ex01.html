@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Best jokes ever</title>
+</head>
+
+<body>
+  <h1>Get ready for a great joke!</h1>
+  <h2 id="jokeContainer"></h2>
+
+  <script>
+
+    const API_URL = 'https://icanhazdadjoke.com/';
+    const myObject = {
+      method: 'GET',
+      headers: { 'Accept': 'application/json' }
+    };
+
+    const fetchJoke = () => {
+      fetch(API_URL, myObject)
+        .then(response => response.json())
+        .then(json => console.log(json.joke))
+        .catch(err => new Error('API not found'));
+    };
+
+    window.onload = () => fetchJoke();
+
+    const promise = new Promise((resolve, reject) => {
+      const myArray = [];
+      for (let i = 0; i < 10; i += 1) {
+        let randNum = Math.ceil(Math.random() * 50);
+        randNum *= randNum;
+        myArray.push(randNum);
+      }
+
+      const total = myArray.reduce((acc, curr) => {
+        return acc + curr;
+      });
+      console.log(total);
+
+      if (total < 9000) {
+        // .catch('ERROOOU2222');
+        return reject("ERRRROOOOOUUUUUUU")
+
+      }
+      resolve((res) => {
+        console.log(res);
+      });
+    })
+  </script>
+</body>
+
+</html>
