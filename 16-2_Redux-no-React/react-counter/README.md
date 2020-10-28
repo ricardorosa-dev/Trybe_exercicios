@@ -91,8 +91,7 @@ npm install redux react-redux
 Agora, começaremos deletando o que é específico do React, e teremos que mudar no Redux.  
 Em Counter.js:
 - Retiramos o _state_, já que vamos fazer com que o Redux controle o estado da aplicação.
-- Retiramos também o `setState({})`das funções `increment` e `decrement`
-POR QUE???
+- Retiramos também o `setState({})`das funções `increment` e `decrement`. Vamos implementar depois a lógica do Redux.
 
 ```Javascript
   increment = () => {
