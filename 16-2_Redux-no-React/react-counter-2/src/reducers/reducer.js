@@ -3,7 +3,7 @@ const INITIAL_STATE = {
   count: 0,
 }
 
-export default function reducer(state = INITIAL_STATE, action) {
+function reducer(state = INITIAL_STATE, action) {
   switch (action.type) {
     case 'INCREMENT':
       return {
@@ -17,3 +17,5 @@ export default function reducer(state = INITIAL_STATE, action) {
       return state;
   }
 }
+
+export default reducer;
