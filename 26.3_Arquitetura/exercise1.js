@@ -24,4 +24,4 @@ function readMyFile(file1, file2) {
   console.log(`The total reading time for this script is ${fileReadingTime} milliseconds.`);
 }
 
-readMyFile('./gaijin.txt', 'mongo.pdf');
+readMyFile('./gaijin.txt', 'mongo.txt');
